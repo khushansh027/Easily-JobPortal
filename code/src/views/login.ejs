@@ -1,0 +1,28 @@
+  <!-- Main Body -->
+  <div class="d-flex justify-content-center align-items-center" style="height: 75vh;">
+
+    <div class="col-lg-6">
+
+      <!-- Card Container -->
+
+      <div class="card-header text-center custom-header bg-warning">
+        <h2 class="mb-0 text-black text-lg-left fw-bold text-decoration-underline">LOGIN</h2>
+      </div>
+
+      <form method="POST" action="/login">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" name="username" class="form-control" id="username" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="password" required>
+        </div>
+        <button type="submit" class="btn btn-warning w-100 fw-bold">Submit</button>
+        <p class="text-center pt-3">Don't have an account? <span><a href="/signup" class="link-warning">Sign Up</a></span></p>
+      </form>
+
+      <!-- End Card Container -->
+    </div>
+
+  </div>

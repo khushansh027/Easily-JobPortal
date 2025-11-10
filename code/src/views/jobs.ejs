@@ -1,0 +1,67 @@
+<style>
+    * {
+        color: #ffffff;
+    }
+    #jobCards {
+        background-color: transparent !important;
+    }
+    .text-info {
+        --bs-text-opacity: 1;
+        color: #007BFF !important;
+    }
+</style>
+    
+<div class="container">
+    <div class="row">
+        <!-- Loop through each job -->
+        <% jobs.forEach(job => { %>
+
+            <div class="col-md-3 mb-3">
+                <div id="jobCards" class="card border-white bg-theme" style="max-width: 18rem;">
+                    <!--company details-->
+                    <div class="card-header d-flex flex-column align-items-start p-2">
+                        <span style="width: 160px"
+                            class="bg-primary bg-opacity-25 text-white border border-success p-1 border-opacity-50 rounded">
+                            Actively hiring
+                            <span><i class="fa fa-line-chart"></i></span>
+                        </span>
+                        <!-- Company Name -->
+                        <h5 class="my-1 fw-bold text-warning">
+                            <%= job.company %>
+                        </h5>
+                    </div>
+
+                    <!-- Position -->
+                    <div style="margin-left: 10px;" class="d-flex flex-column align-items-start">
+                        <span>Tech | <%= job.position %></span>
+                    </div>
+
+                    <!-- variable job details -->
+                    <div class="card-body d-flex align-items-start justify-content-start flex-column">
+                        <!-- Location -->
+                        <p class="pw-bold">
+                            <i class="fa fa-map-marker"></i>
+                            <%= job.location %>
+                        </p>
+                        <!-- Salary -->
+                        <p class="pw-bold">
+                            <i class="fa fa-rupee"></i>
+                            <%= job.salary %>
+                        </p>
+                        <!-- Skills -->
+                        <div class="skills p-1">
+                            <% job.skills.forEach(skill => { %>
+                                <button class="btn btn-sm btn-outline-info mb-1"><%= skill %></button>
+                            <% }) %>
+                        </div>
+                        <!-- Link to job details -->
+                        <a href="/jobs/<%= job.id %>" class="btn btn-sm btn-outline-success my-2">View details</a>
+
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+        <!-- End of job loop -->
+    </div>
+</div>

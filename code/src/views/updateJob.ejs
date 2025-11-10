@@ -1,0 +1,25 @@
+<h2>Edit Job</h2>
+<form action="/jobs/<%= job.id %>?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="mb-3">
+        <label for="company" class="form-label">Company</label>
+        <input type="text" class="form-control" id="company" name="company" value="<%= job.company %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="position" class="form-label">Position</label>
+        <input type="text" class="form-control" id="position" name="position" value="<%= job.position %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" name="location" value="<%= job.location %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="text" class="form-control" id="salary" name="salary" value="<%= job.salary %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="skills" class="form-label">Skills</label>
+        <input type="text" class="form-control" id="skills" name="skills" value="<%= job.skills.join(', ') %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Job</button>
+</form>

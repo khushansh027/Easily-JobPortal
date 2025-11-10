@@ -1,0 +1,33 @@
+<h1 class="font-monospace text-center">
+    <u>
+        Applicants Details for<br>
+        <span class="text-info text-info">
+            <%= job.role %>
+        </span>
+            at
+        <span class="text-info text-info">
+            <%= job.company %> :-
+        </span>
+    </u>
+</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Resume</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% applicants.forEach(applicant => { %>
+            <tr>
+                <td><%= applicant.name %></td>
+                <td><%= applicant.email %></td>
+                <td><%= applicant.contact %></td>
+                <td><a href="/uploads/<%= applicant.resume %>" target="_blank" class="btn btn-info">View Resume</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

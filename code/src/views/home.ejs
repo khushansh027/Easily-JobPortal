@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-12">
+    <% if (lastVisit) { %>
+      <p>Your last visit was on: <%= lastVisit %></p>
+    <% } else { %>
+      <p>This is your first visit!</p>
+    <% } %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <% if (recruiterEmail) { %>
+      <h2>Welcome, <%= recruiterEmail %>!</h2>
+    <% } %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>About Our Company</h2>
+    <p>We are dedicated to connecting job seekers with their dream jobs and helping recruiters find the perfect candidates.</p>
+    <p><em>Your Future, Our Mission.</em></p>
+    <a class="border" href="/jobs" target="_blank">I'm a Job Seeker</a>
+    <a class="border" href="/signup" target="_blank">I'm a Recruiter</a>
+  </div>
+  <div class="col-md-6">
+    <img src="https://easily-deploy.onrender.com/images/banner.png" alt="Stock-Creative" class="img-fluid" id="company-image">
+  </div>
+</div>
